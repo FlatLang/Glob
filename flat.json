@@ -1,0 +1,28 @@
+{
+  "name": "Glob",
+  "version": "0.1.0",
+  "description": "Flat Glob Library",
+  "author": "Braden Steffaniak",
+  "license": "ISC",
+  "defaultTarget": "es6",
+  "scripts": {
+    "test": "node dist/test.js"
+  },
+  "main": {
+    "mainClass": "flat/glob/Glob",
+    "source": "src",
+    "dependencies": {
+      "github:FlatLang/IO": "master",
+      "github:FlatLang/System": "master",
+      "github:FlatLang/Logger": "master",
+      "github:FlatLang/Regex": "master"
+    }
+  },
+  "test": {
+    "mainClass": "flat/glob/Glob_TestSuite",
+    "source": "test",
+    "dependencies": {
+      "github:FlatLang/Nest": "master"
+    }
+  }
+}
