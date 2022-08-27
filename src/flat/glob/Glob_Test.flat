@@ -10,8 +10,8 @@ testable class {
   async test `can do basic glob search`() {
     let value = Glob.glob("**/*_Test*.flat", workingDirectory, includeHidden: false)
 
-    expect(value.contains(File("#{workingDirectory.normalizedLocation}/test/flat/glob/Glob_Test.flat"))).toBe(true)
-    expect(value.contains(File("#{workingDirectory.normalizedLocation}/test/flat/glob/Glob_TestSuite.flat"))).toBe(true)
+    expect(value.contains(File("#{workingDirectory.normalizedLocation}/src/flat/glob/Glob_Test.flat"))).toBe(true)
+    expect(value.contains(File("#{workingDirectory.normalizedLocation}/src/flat/glob/Glob_TestSuite.flat"))).toBe(true)
     expect(value.contains(File("#{workingDirectory.normalizedLocation}/src/flat/glob/Glob.flat"))).toBe(false)
   }
 }
