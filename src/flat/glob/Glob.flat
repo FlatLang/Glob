@@ -2,11 +2,11 @@ package flat/glob
 
 import flat/log/Logger
 
-import flatlang/datastruct/HashMap
-import flatlang/io/File
-import flatlang/regex/Regex
-import flatlang/regex/Pattern
-import flatlang/regex/RegexStringExtensions
+import flat/datastruct/HashMap
+import flat/io/File
+import flat/regex/Regex
+import flat/regex/Pattern
+import flat/regex/RegexStringExtensions
 
 class {
   let static Logger log = Logger(Glob.class)

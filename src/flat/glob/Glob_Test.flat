@@ -1,6 +1,6 @@
 package flat/glob
 
-import flatlang/io/File
+import flat/io/File
 
 import flat/glob/Glob
 
