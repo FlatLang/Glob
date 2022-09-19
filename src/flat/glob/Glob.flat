@@ -1,7 +1,6 @@
 package flat/glob
 
 import flat/log/Logger
-
 import flat/datastruct/HashMap
 import flat/io/File
 import flat/regex/Regex
