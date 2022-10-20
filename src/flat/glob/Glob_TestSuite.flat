@@ -9,7 +9,7 @@ import flat/io/FancyOutputStream
   Glob_Test
 ]]
 class {
-  public static async main(String args[]) {
+  public static async main(String[] args) {
     let test = Glob_TestSuite()
 
     Timer timer = Timer().start()
