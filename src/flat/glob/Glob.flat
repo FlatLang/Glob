@@ -37,16 +37,16 @@ class {
 
     let results = currentDirectory
       .getChildFiles(includeHidden, includeDirectories: true)
-      .filter(file => matchesGlobPattern(file.isFile ? filePattern : directoryPattern, workingDirectory, file))
-      .flatMap((file) => {
+      .filter({ matchesGlobPattern(_x.isFile ? filePattern : directoryPattern, workingDirectory, _x) })
+      .flatMap({
         let matches = Array<File>()
 
-        if (!file.isDirectory || matchesGlobPattern(filePattern, workingDirectory, file)) {
-          matches.add(file)
+        if (!_x.isDirectory || matchesGlobPattern(filePattern, workingDirectory, _x)) {
+          matches.add(_x)
         }
 
-        if (file.isDirectory) {
-          matches.addAll(glob(filePattern, directoryPattern, workingDirectory, file, includeHidden))
+        if (_x.isDirectory) {
+          matches.addAll(glob(filePattern, directoryPattern, workingDirectory, _x, includeHidden))
         }
 
         return matches
