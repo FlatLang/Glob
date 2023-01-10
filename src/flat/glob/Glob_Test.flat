@@ -5,7 +5,7 @@ import flat/io/File
 import flat/glob/Glob
 
 testable class {
-  static let File workingDirectory = File.EXECUTED_DIRECTORY.getParent()
+  static let File workingDirectory = File.EXECUTED_DIRECTORY.getParent().getParent()
 
   async test `can do basic glob search`() {
     let value = Glob.glob("**/*_Test*.flat", workingDirectory, includeHidden: false)
